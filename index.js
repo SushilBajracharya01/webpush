@@ -6,6 +6,9 @@ const path = require("path");
 const app = express();
 app.use(bodyParser.json());
 
+//Set static path
+app.use(express.static(path.join(__dirname, "htmlClient")));
+
 const publicVapidKey =
   "BEQ5PEqzPm_iokxZUXBb9G7Qop3BYljPnVwpPFvHAlk3MwnL8k9QtbuLh51LA53UnGotcS2ltg7H_K5iMQX2HjI";
 const privateVapidKey = "2xZ0K4qkM0-L94bCRCoc5l33ZL2WjOj6_KUYcfdwmEA";
